@@ -1,19 +1,27 @@
-import React, { Component } from 'react';
 import './App.css';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Home from './pages/Home.js'
+import Login from './pages/Login.js'
+import Navigation from './components/Navigation';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+function App() {
+
+  return (
+    <div className="App">
+    <div className=''>
+      <Navigation></Navigation>
+    </div>
+    <div>
+              {/* <DataContext.Provider value={contextValues}> */}
+                  <Routes>
+                      <Route path="/" element={<Home/>}></Route>
+                      <Route path="/login" element={<Login/>}></Route>
+                     
+                  </Routes>
+              {/* </DataContext.Provider> */}
+          </div>
+  </div>
+  );
 }
 
 export default App;

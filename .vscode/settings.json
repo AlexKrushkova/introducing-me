@@ -1,0 +1,9 @@
+{
+    "eslint.codeActionsOnSave.rules": null,
+    "eslint.format.enable": false,
+    "eslint.nodeEnv": "",
+    "reactSnippets.settings.languageScopes": "typescript,typescriptreact,javascript,javascriptreact",
+    "rules": {
+        "react/jsx-fragments": ["error", "element"]
+      }
+}
